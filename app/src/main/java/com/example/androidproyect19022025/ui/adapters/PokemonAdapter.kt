@@ -32,9 +32,9 @@ class ViewHolderPokemon(v: View): RecyclerView.ViewHolder(v){
 
     fun render(pokemonInfo: Pokemon){
         binding.tvNombre.text=pokemonInfo.nombre
-        Picasso.get().load(pokemonInfo.pokemonSprite.versionJuego.generationV.blackWhite.animated.frontDefault).into(binding.imageView)
+        Picasso.get().load(pokemonInfo.pokemonSprite.frontDefault).into(binding.imageView)
         binding.tvTipo.text = pokemonInfo.tipos[0].tipo.nombreTipo
-        binding.tvTipo2.text = if (pokemonInfo.tipos.size > 1) pokemonInfo.tipos[1].tipo.nombreTipo else ""
+        binding.tvTipo2.text = if (pokemonInfo.tipos.size > 1) pokemonInfo.tipos[1].tipo.nombreTipo else pokemonInfo.tipos[0].tipo.nombreTipo
         binding.tvHabilidad.text = pokemonInfo.habilidades[0].habilidad.nombreHabilidad
         binding.tvHabilidad2.text = if (pokemonInfo.habilidades.size > 1) pokemonInfo.habilidades[1].habilidad.nombreHabilidad else ""
         binding.tvHabilidad3.text = if (pokemonInfo.habilidades.size > 2) pokemonInfo.habilidades[2].habilidad.nombreHabilidad else ""
