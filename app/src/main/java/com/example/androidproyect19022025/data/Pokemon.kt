@@ -17,22 +17,6 @@ data class NombreHabilidad(
 )
 
 data class PokemonSprite(
-    @SerializedName("versions") val versionJuego: Version
-)
-
-data class Version(
-    @SerializedName("generation-v") val generationV: GenerationV
-)
-
-data class GenerationV(
-    @SerializedName("black-white") val blackWhite: BlackWhite
-)
-
-data class BlackWhite(
-    val animated: Animated
-)
-
-data class Animated(
     @SerializedName("front_default") val frontDefault: String,
     @SerializedName("front_shiny") val frontShiny: String,
 )
