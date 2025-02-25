@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondoaplicacion"
+    tools:context=".ui.activities.AppActivity"
+    tools:layout_editor_absoluteX="169dp"
+    tools:layout_editor_absoluteY="-1dp">
+
+    <Button
+        android:id="@+id/btnEquipos"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#E6B920"
+        android:text="Equipos"
+        app:icon="@drawable/baseline_catching_pokemon_24"
+        app:layout_constraintEnd_toStartOf="@+id/btnVideos"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_pokemon" />
+
+    <Button
+        android:id="@+id/btnVideos"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:backgroundTint="#E6B920"
+        android:text="Tutorial"
+        app:icon="@drawable/baseline_library_books_24"
+        app:layout_constraintBottom_toBottomOf="@+id/btnEquipos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnEquipos"
+        app:layout_constraintTop_toTopOf="@+id/btnEquipos" />
+
+    <ImageView
+        android:id="@+id/iv_pokemon"
+        android:layout_width="353dp"
+        android:layout_height="262dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombre"
+        tools:srcCompat="@drawable/pokemon" />
+
+    <Button
+        android:id="@+id/btnAmigos"
+        android:layout_width="130dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#581681"
+        android:text="Amigos"
+        app:icon="@android:drawable/ic_menu_agenda"
+        app:layout_constraintEnd_toStartOf="@+id/btnPokedex"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEquipos" />
+
+    <Button
+        android:id="@+id/btnPokedex"
+        android:layout_width="130dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="10dp"
+        android:backgroundTint="#581681"
+        android:text="Pokedex"
+        app:icon="@drawable/pokemon"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAmigos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnAmigos"
+        app:layout_constraintTop_toTopOf="@+id/btnAmigos" />
+
+    <Button
+        android:id="@+id/btnCompeticiones"
+        android:layout_width="177dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#E6B920"
+        android:text="Competiciones"
+        app:icon="@android:drawable/ic_dialog_map"
+        app:layout_constraintEnd_toStartOf="@+id/btn_wikipedia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAmigos" />
+
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#581681"
+        android:text="Salir"
+        app:layout_constraintEnd_toStartOf="@+id/btnCerrar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCompeticiones" />
+
+    <Button
+        android:id="@+id/btnCerrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#581681"
+        android:text="Cerrar"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSalir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnSalir"
+        app:layout_constraintTop_toTopOf="@+id/btnSalir" />
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Bienvenido %s"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_wikipedia"
+        android:layout_width="150dp"
+        android:layout_height="54dp"
+        android:backgroundTint="#E6B920"
+        android:text="Wikipedia"
+        app:icon="@android:drawable/ic_menu_info_details"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCompeticiones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnCompeticiones"
+        app:layout_constraintTop_toTopOf="@+id/btnCompeticiones" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

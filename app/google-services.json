@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "736524979245",
+    "firebase_url": "https://pokeapp-5bcbf-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "pokeapp-5bcbf",
+    "storage_bucket": "pokeapp-5bcbf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:736524979245:android:bd6fbf0b50a45acdddbca4",
+        "android_client_info": {
+          "package_name": "com.example.androidproyect19022025"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "736524979245-jeuvhk9hl0jun2agjkmlm2asjd8evfjb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.androidproyect19022025",
+            "certificate_hash": "02fdda744dbb143c4d9ad48c28f78f98f7ca94ad"
+          }
+        },
+        {
+          "client_id": "736524979245-jvbnm6cbq2psq31ltq4e2tun4q1k57qn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1Q49PMBISPPWRO1qVZMP0vwiRfhCjDfY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "736524979245-jvbnm6cbq2psq31ltq4e2tun4q1k57qn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
