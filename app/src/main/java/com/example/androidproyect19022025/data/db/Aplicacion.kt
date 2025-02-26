@@ -9,7 +9,7 @@ class Aplicacion: Application(){
     companion object{
         //Si se aumenta la version se borraran todos los registros
 
-        const val VERSION=1
+        const val VERSION=2
         const val DB="Base_1"
         const val TABLA = "amigos"
         lateinit var contexto: Context
