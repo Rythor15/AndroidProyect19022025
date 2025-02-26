@@ -8,7 +8,7 @@ class MyDB(): SQLiteOpenHelper(Aplicacion.contexto, Aplicacion.DB, null, Aplicac
             "id integer primary key autoincrement," +
             "nombre text not null," +
             "edad integer not null," +
-            "nombreJuego text not null unique," +
+            "apellido text not null unique," +
             "imagen text not null);"
 
 

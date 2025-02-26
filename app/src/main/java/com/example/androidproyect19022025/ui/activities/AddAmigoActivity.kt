@@ -43,26 +43,6 @@ class AddAmigoActivity : AppCompatActivity() {
             binding.etTitle2.text="Crear Amigo"
         }
     }
-
-    private fun recogerContacto() {
-        val datos=intent.extras
-        if (datos!=null){
-            val a = datos.getSerializable("AMIGO") as AmigoModel
-            isUpdate = true
-            nombre = a.nombre
-            edad = a.edad
-            imagen = a.imagen
-            apellido = a.apellido
-            id = a.id
-            pintarDatos()
-        }
-    }
-
-    private fun pintarDatos() {
-        binding.etNombre.setText(nombre)
-        binding.etApellido.setText(apellido)
-    }
-
     private fun setListeners() {
         binding.btnCancelar.setOnClickListener{
             finish()
@@ -91,8 +71,6 @@ class AddAmigoActivity : AppCompatActivity() {
 
         })
     }
-
-
 
     private fun guardarRegistro() {
         if(datosCorrectos()){
@@ -136,4 +114,27 @@ class AddAmigoActivity : AppCompatActivity() {
         binding.sbEdad.progress=0
         binding.tvEdad.text = String.format(getString(R.string.tv_poner_edad), 0)
     }
+
+
+    private fun recogerContacto() {
+        val datos=intent.extras
+        if (datos!=null){
+            val a = datos.getSerializable("AMIGO") as AmigoModel
+            isUpdate = true
+            nombre = a.nombre
+            edad = a.edad
+            imagen = a.imagen
+            apellido = a.apellido
+            id = a.id
+            pintarDatos()
+        }
+    }
+
+    private fun pintarDatos() {
+        binding.etNombre.setText(nombre)
+        binding.etApellido.setText(apellido)
+        binding.sbEdad.progress = edad
+        binding.tvEdad.text = String.format(getString(R.string.tv_poner_edad), edad)
+    }
+
 }

@@ -10,8 +10,13 @@ import com.example.androidproyect19022025.databinding.LayoutPokemonBinding
 import com.squareup.picasso.Picasso
 
 class PokemonAdapter(
-    var pokeInfo: MutableList<Pokemon>
+    var pokeInfo: List<Pokemon>
 ):  RecyclerView.Adapter<ViewHolderPokemon>() {
+
+    fun actualizarPokedex(newList: List<Pokemon>) {
+        pokeInfo = newList
+        notifyDataSetChanged()
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderPokemon {
         val v= LayoutInflater.from(parent.context).inflate(R.layout.layout_pokemon, parent, false)

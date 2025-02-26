@@ -65,6 +65,31 @@ class MapaActivity : AppCompatActivity(), OnMapReadyCallback, SensorEventListene
         title = "Mapa de torneos"
         sensorManager=getSystemService(SENSOR_SERVICE) as SensorManager
         iniciarSensor()
+
+    }
+
+    private fun mensajesMarcadores() {
+        map.setOnMarkerClickListener {
+            var value = it.title.toString()
+            when (value) {
+                "Mundial Pokemon 2025" -> {
+                    Toast.makeText(this, String.format(getString(R.string.texto_toast) + " " + value), Toast.LENGTH_SHORT).show()
+                    true
+                }
+                "Regional Pokemon Europa Reino Unido" -> {
+                    Toast.makeText(this, String.format(getString(R.string.texto_toast) + value), Toast.LENGTH_SHORT).show()
+                    true
+                }
+                "Regional Pokemon Europa Suecia" -> {
+                    Toast.makeText(this, String.format(getString(R.string.texto_toast) + value), Toast.LENGTH_SHORT).show()
+                    true
+                }
+                else -> {
+                    false
+                }
+
+            }
+        }
     }
 
     private fun iniciarSensor() {
@@ -88,6 +113,7 @@ class MapaActivity : AppCompatActivity(), OnMapReadyCallback, SensorEventListene
         ponerMarcador(LatLng(52.44851528365187, -1.7185531875234843), "Regional Pokemon Europa Reino Unido")
         ponerMarcador(LatLng(59.277428636742854, 18.01492628216522), "Regional Pokemon Europa Suecia")
         mostrarLugarTorneo(LatLng(33.82475463077455, -117.90661939520065), 10f)
+        mensajesMarcadores()
     }
 
     private fun ponerMarcador(coordenadas: LatLng, titulo: String) {

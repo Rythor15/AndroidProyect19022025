@@ -10,5 +10,4 @@ object ObjectApiClient {
         .build()
     //Con esto conseguimos que la variable pueda usar la interfaz sin necesidad de crear una instancia de la interfaz y demas
     val apiClient = retrofit2.create(PokemonInterfaz::class.java)
-
 }

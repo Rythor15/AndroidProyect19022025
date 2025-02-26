@@ -71,8 +71,7 @@ class PokedexActivity : AppCompatActivity() {
 
                         // Actualizamos la UI inmediatamente después de recibir la respuesta
                         withContext(Dispatchers.Main) {
-                            adapter.pokeInfo = listaPokemonInfo
-                            adapter.notifyDataSetChanged()
+                            adapter.actualizarPokedex(listaPokemonInfo)
                         }
                     } else {
                         Log.e("PokemonError", "El Pokémon con ID $i no se pudo obtener")

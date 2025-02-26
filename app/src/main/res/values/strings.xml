@@ -3,6 +3,10 @@
     <string name="tv_poner_edad">
         Tiene %d años.
     </string>
+    
+    <string name="texto_toast">
+        Aqui se celebra el
+    </string>
 
     <string-array name="array_colores">
         <item>-- Selecciona un color --</item>
